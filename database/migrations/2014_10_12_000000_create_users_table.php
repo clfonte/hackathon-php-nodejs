@@ -15,8 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('cor', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->timestamps();
+            $table->string('cor');
         });
     }
 
@@ -27,6 +26,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('cor');
     }
 }
