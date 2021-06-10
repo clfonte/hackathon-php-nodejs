@@ -22,9 +22,9 @@ class CreateVeiculosTable extends Migration
             $table->string('tipo');
             $table->string('fotodestaque');
             $table->string('opcional');
-            $table->int('cor_id');
-            $table->int('marac_id');
-            $table->int('usuario_id');
+            $table->integer('cor_id');
+            $table->integer('marca_id');
+            $table->integer('usuario_id');
         });
     }
 
