@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/marca/novo', 'MarcaController@create');
+Route::post('/marca/novo', 'MarcaController@store')->name('registrar_marca');
+
+Route::get('/cor/novo', 'CorController@create');
+Route::post('/cor/novo', 'CorController@store')->name('registrar_cor');
+
+Route::get('/veiculo/novo', 'VeiculoController@create');
+Route::post('/veiculo/novo', 'VeiculoController@store')->name('registrar_veiculo');
