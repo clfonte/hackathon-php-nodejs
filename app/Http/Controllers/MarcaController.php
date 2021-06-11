@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Marca;
 use Illuminate\Http\Request;
 
 class MarcaController extends Controller
@@ -10,7 +11,11 @@ class MarcaController extends Controller
     {
         return view('marca.create');
     }
-    public function store(Request $request){
-        dd($request->all());
+    public function store(Request $request)
+    {
+        Marca::create([
+            'nome' => $request->nome,
+        ]); 
+        return "Marca cadastrada com Sucesso!";
     }
 }
