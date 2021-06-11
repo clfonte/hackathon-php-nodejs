@@ -16,8 +16,8 @@ class CreateUsersTable extends Migration
         Schema::create('cor', function (Blueprint $table) {
             $table->id();
             $table->string('cor');
-            $table->string('update_up');
-            $table->string('created_up');
+            $table->string('updated_at');
+            $table->string('created_at');
         });
     }
 
