@@ -20,31 +20,31 @@
 
       <div class="mb-3">
         <label for="formFile" class="form-label"></label>
-        <input class="form-control" type="file" id="formFile">
+        <input class="form-control" type="file" name="fotodestaque" id="formFile">
       </div>
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label"></label>
-        <input type="text" id="disabledTextInput" class="form-control" placeholder="Modelo">
+        <input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo">
       </div>
 
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" placeholder="Ano do modelo">
+          <input type="text" class="form-control" name="anoModelo" placeholder="Ano do modelo">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Ano da fabricação">
+          <input type="text" class="form-control" name="anoFabricacao" placeholder="Ano da fabricação">
         </div>
       </div>
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label"></label>
-        <input type="number" id="disabledTextInput" class="form-control" placeholder="Valor">
+        <input type="number" id="valor" name="valor" class="form-control" placeholder="Valor">
       </div>
 
       <div class="col-auto">
         <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-        <select class="form-select" id="autoSizingSelect">
+        <select class="form-select" name="tipo" id="autoSizingSelect">
           <option value="Sedan">Sedan</option>
           <option value="Picape">Picape</option>
           <option value="SUV">SUV</option>
@@ -57,26 +57,26 @@
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label"></label>
-        <input type="text" id="disabledTextInput" class="form-control" placeholder="Modelo">
+        <input type="text" id="disabledTextInput" name="opicional" class="form-control" placeholder="Opicional">
       </div>
 
       <div class="col-auto">
         <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-        <select class="form-select" id="autoSizingSelect">
+        <select class="form-select" name="cor_id" id="autoSizingSelect">
         <option class="Disabled">Selecione a cor...</option>
         </select>
       </div><br>
 
       <div class="col-auto">
         <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-        <select class="form-select" id="autoSizingSelect">
+        <select class="form-select" name="marca_id" id="autoSizingSelect">
         <option class="Disabled">Selecione a marca...</option>
         </select>
       </div><br>
 
       <div class="col-auto">
         <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-        <select class="form-select" id="autoSizingSelect">
+        <select class="form-select" name="usuario_id" id="autoSizingSelect">
           <option class="Disabled">Selecione o usuario...</option>
         </select>
       </div><br>
