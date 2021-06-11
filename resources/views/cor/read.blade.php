@@ -8,17 +8,24 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <title>Cadastro - Marcas</title>
+  <title>Cores</title>
 </head>
 
 <body>
 
   <div class="container">
-  <table class="table table-striped">
-    <thead>
+    <table class="table table-striped">
+      <thead>
         <tr>Cor</tr>
-    </thead>
-</table>
+      </thead>
+      <tbody>
+        @foreach($cor as $c)
+        <tr>
+          <td>{{$c->cor}}</td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>

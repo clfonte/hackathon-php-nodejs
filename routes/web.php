@@ -21,6 +21,7 @@ Route::get('/marca/novo', 'MarcaController@create');
 Route::post('/marca/novo', 'MarcaController@store')->name('registrar_marca');
 
 Route::get('/cor/novo', 'CorController@create');
+Route::get('/cor/listar', 'CorController@read');
 Route::post('/cor/novo', 'CorController@store')->name('registrar_cor');
 
 Route::get('/veiculo/novo', 'VeiculoController@create');
