@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cor extends Model
 {
-    protected $fillable = ['nome'];
+    protected $fillable = ['cor'];
 }

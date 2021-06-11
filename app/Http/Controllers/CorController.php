@@ -14,7 +14,7 @@ class CorController extends Controller
     public function store(Request $request)
     {
         Cor::create([
-            'nome' => $request->nome,
+            'cor' => $request->nome,
         ]); 
         return "Cor cadastrada com Sucesso!";
     }
