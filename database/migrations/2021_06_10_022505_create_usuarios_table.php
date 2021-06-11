@@ -18,7 +18,8 @@ class CreateUsuariosTable extends Migration
             $table->string('nome');
             $table->string('login');
             $table->string('senha');
-            
+            $table->string('update_up');
+            $table->string('created_up');
         });
     }
 

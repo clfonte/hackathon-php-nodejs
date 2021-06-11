@@ -25,6 +25,8 @@ class CreateVeiculosTable extends Migration
             $table->integer('cor_id');
             $table->integer('marca_id');
             $table->integer('usuario_id');
+            $table->string('update_up');
+            $table->string('created_up');
         });
     }
 
