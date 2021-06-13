@@ -34,12 +34,14 @@
                   <h5 class="modal-title" id="exampleModalLabel">Atenção!</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <form action="{{route('excluir_marca', ['id' => $m->id])}}" method="POST">
                 <div class="modal-body">
                   Tem certeza que deseja excluir essa marca ?
                 </div>
                 <div class="modal-footer">
-                  <a href="{{route('excluir_marca', ['id' => $m->id])}}" type="button" class="btn btn-damger">Sim</a>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Sim</button>
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                  </form>
                 </div>
               </div>
             </div>
