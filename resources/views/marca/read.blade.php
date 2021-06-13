@@ -22,7 +22,7 @@
         @foreach($marca as $m)
         <tr>
           <td>{{$m->marca}}</td>
-          <td>Edit</td>
+          <td><a class="btn btn-warning" href="{{route('editarm', ['id' => $m->id])}}">Editar</a></td>
           <td>delete</td>
         </tr>
         @endforeach

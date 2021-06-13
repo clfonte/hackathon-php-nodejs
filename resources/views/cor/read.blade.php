@@ -24,7 +24,7 @@
         <tr>
           <td>{{$c->id}}</td>
           <td>{{$c->cor}}</td>
-          <td><a class="btn btn-warning" href="">Edit</a></td>
+          <td><a class="btn btn-warning" href="{{route('editarc', ['id' => $c->id])}}">Edit</a></td>
           <td><a class="btn btn-danger" data-bs-toggle="modal" href="">Delete</a></td>
         </tr>
         @endforeach
