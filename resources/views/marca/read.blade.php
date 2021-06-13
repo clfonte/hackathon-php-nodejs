@@ -26,6 +26,24 @@
           <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
               Deletar
             </button></td>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Atenção!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Tem certeza que deseja excluir essa marca ?
+                </div>
+                <div class="modal-footer">
+                  <a href="{{route('excluir_marca', ['id' => $m->id])}}" type="button" class="btn btn-damger">Sim</a>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </tr>
         @endforeach
       </tbody>
@@ -33,24 +51,6 @@
     <a class="btn btn-primary" href="{{route('registrar_marca')}}">Cadastrar</a>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Atenção!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Tem certeza que deseja excluir essa marca ?
-        </div>
-        <div class="modal-footer">
-          <a href="" type="button" class="btn btn-damger">Sim</a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
