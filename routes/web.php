@@ -18,7 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('/marca/novo', 'MarcaController@create');
-Route::post('/marca/novo', 'MarcaController@store')->name('registrar_marca');
+Route::get('/cor/listar', 'MarcaController@read');
+Route::post('/marca/listar', 'MarcaController@store')->name('registrar_marca');
 
 Route::get('/cor/novo', 'CorController@create');
 Route::get('/cor/listar', 'CorController@read');

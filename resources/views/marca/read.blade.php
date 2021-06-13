@@ -8,7 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <title>Cores</title>
+  <title>Marcas</title>
 </head>
 
 <body>
@@ -16,19 +16,19 @@
   <div class="container">
     <table class="table table-striped">
       <thead>
-        <tr>Cor</tr>
+        <tr>Marca</tr>
       </thead>
       <tbody>
-        @foreach($cor as $c)
+        @foreach($marca as $m)
         <tr>
-          <td>{{$c->cor}}</td>
+          <td>{{$m->marca}}</td>
           <td>edit</td>
           <td>delete</td>
         </tr>
         @endforeach
       </tbody>
     </table>
-    <a class="btn btn-primary" href="{{route('registrar_cor')}}">Cadastrar</a>
+    <a class="btn btn-primary" href="{{route('registrar_marca')}}">Cadastrar</a>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>

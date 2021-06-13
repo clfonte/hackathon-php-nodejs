@@ -11,6 +11,14 @@ class MarcaController extends Controller
     {
         return view('marca.create');
     }
+    public function read(){
+        
+        $marca = Marca::all();
+        return view('marca.read', compact('marca'));
+        
+    }
+
+
     public function store(Request $request)
     {
         Marca::create([
