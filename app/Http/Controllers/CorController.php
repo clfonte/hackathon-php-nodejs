@@ -7,11 +7,13 @@ use App\Cor;
 
 class CorController extends Controller
 {
+    //criar dados
     public function create()
     {
         return view('cor.create');
     }
 
+    //resgatar os dados para listar
     public function read()
     {
 
@@ -19,6 +21,8 @@ class CorController extends Controller
         return view('cor.read', compact('cor'));
     }
 
+
+    //levar os dadosmpara a tela de edição
     public function edit($id)
     {
         $cor = Cor::findOrFail($id);
@@ -26,6 +30,7 @@ class CorController extends Controller
     }
 
 
+    //editar os dados
     public function update(Request $request, $id)
     {
 
@@ -34,14 +39,22 @@ class CorController extends Controller
         $cor->update([
             'cor' => $request->cor
         ]);
-        return "<script>alert('Editado com sucesso.').history.back();</script>";
+        return "<script>alert('Editado com sucesso.')history.back();</script>";
     }
 
+    // Cadastrar
     public function store(Request $request)
     {
         Cor::create([
             'cor' => $request->cor,
         ]);
-        return "<script>alert('Cadastrado com sucesso.').history.back();</script>";
+        return "<script>alert('Cadastrado com sucesso.')history.back();</script>";
+    }
+
+    //Deletar
+    public function destroy($id)
+    {
+        $cor = Cor::findOrFail($id);
+        $cor->delete();
     }
 }

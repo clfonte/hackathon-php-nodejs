@@ -22,7 +22,7 @@
         @foreach($marca as $m)
         <tr>
           <td>{{$m->marca}}</td>
-          <td><a href="{{ route('editar') }}"></a></td>
+          <td>Edit</td>
           <td>delete</td>
         </tr>
         @endforeach
