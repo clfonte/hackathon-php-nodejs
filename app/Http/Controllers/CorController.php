@@ -21,9 +21,10 @@ class CorController extends Controller
 
     public function edit($id)
     {
-        $cor = Cor::finfOrFail($id);
+        $cor = Cor::findOrFail($id);
         return view('cor.edit', ['cor' => $cor]);
     }
+
 
     public function update(Request $request, $id)
     {
@@ -33,7 +34,7 @@ class CorController extends Controller
         $cor->update([
             'cor' => $request->cor
         ]);
-        return "alert('Editado com sucesso.').history.back();";
+        return "<script>alert('Editado com sucesso.').history.back();</script>";
     }
 
     public function store(Request $request)
@@ -41,6 +42,6 @@ class CorController extends Controller
         Cor::create([
             'cor' => $request->cor,
         ]);
-        return "alert('Cadastrado com sucesso.').history.back();";
+        return "<script>alert('Cadastrado com sucesso.').history.back();</script>";
     }
 }
