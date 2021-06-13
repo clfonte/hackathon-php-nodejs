@@ -19,12 +19,27 @@ class CorController extends Controller
         
     }
 
+    public function edit($id){
+        $cor = Cor::finfOrFail($id);
+        return view('cor.edit', ['cor' => $cor]);
+    }
+
+    public function update (Request $request, $id){
+        
+        $cor = Cor::findOrFail($id);
+        
+        $cor->update([
+            'cor' => $request->cor
+        ]);
+        return "alert('Editado com sucesso.').history.back();";
+    }
+
     public function store(Request $request)
     {
         Cor::create([
             'cor' => $request->cor,
         ]); 
-        return "Cor cadastrada com Sucesso!";
+        return "alert('Cadastrado com sucesso.').history.back();";
     }
   
 }

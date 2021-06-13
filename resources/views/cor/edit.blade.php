@@ -8,18 +8,18 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <title>Cadastro - Cor</title>
+  <title>Editar - Cor</title>
 </head>
 
 <body>
 
   <div class="container">
-    <form action="{{ route('registrar_cor') }}" method="POST">
+    <form action="{{ route('editar_cor', ['id' => $cor->id]) }}" method="POST">
       @csrf
-      <legend>Cadastro de Cor </legend>
+      <legend>Editar Cor </legend>
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label"></label>
-        <input type="text" id="nome" name="cor" class="form-control" placeholder="Nome">
+        <input type="text" id="nome" name="cor" value="{[ $cor->cor }}" class="form-control" placeholder="Nome">
       </div>
 
       <button type="submit" class="btn btn-primary">Enviar</button>
