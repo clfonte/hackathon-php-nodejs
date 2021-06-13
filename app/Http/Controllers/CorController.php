@@ -22,7 +22,7 @@ class CorController extends Controller
     }
 
 
-    //levar os dadosmpara a tela de edição
+    //levar os dados para a tela de edição
     public function edit($id)
     {
         $cor = Cor::findOrFail($id);
