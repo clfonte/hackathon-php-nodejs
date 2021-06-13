@@ -22,6 +22,7 @@ Route::get('/marca/listar', 'MarcaController@read');
 Route::post('/marca/listar', 'MarcaController@store')->name('registrar_marca');
 Route::get('/marca/edit/{id}', 'MarcaController@edit')->name('editarm');
 Route::post('/marca/edit/{id}', 'MarcaController@update')->name('editar_marca');
+Route::post('/marca/delete/{id}', 'MarcaController@destroy')->name('excluir_marca');
 
 Route::get('/cor/novo', 'CorController@create');
 Route::get('/cor/listar', 'CorController@read');

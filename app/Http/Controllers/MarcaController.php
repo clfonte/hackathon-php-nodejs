@@ -51,4 +51,11 @@ class MarcaController extends Controller
         ]);
         return "<script>alert('Editado com sucesso.')history.back();</script>";
     }
+
+    //Deletar
+    public function destroy($id)
+    {
+        $marca = Marca::findOrFail($id);
+        $marca->delete();
+    }
 }

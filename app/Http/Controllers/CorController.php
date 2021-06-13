@@ -56,5 +56,7 @@ class CorController extends Controller
     {
         $cor = Cor::findOrFail($id);
         $cor->delete();
+
+        return "<script>alert('Excluido com sucesso.')history.back();</script>";
     }
 }
