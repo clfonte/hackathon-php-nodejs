@@ -19,7 +19,7 @@
       <legend>Editar Cor </legend>
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label"></label>
-        <input type="text" id="cor" name="cor" value="{[ $cor->cor }}" class="form-control" placeholder="Nome">
+        <input type="text" id="cor" name="cor" value="{{ $cor->cor }}" class="form-control" placeholder="Nome">
       </div>
 
       <button type="submit" class="btn btn-primary">Enviar</button>
