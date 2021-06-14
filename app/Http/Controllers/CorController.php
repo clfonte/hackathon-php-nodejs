@@ -13,7 +13,6 @@ class CorController extends Controller
         return view('cor.create');
     }
 
-    //resgatar os dados para listar
     public function read()
     {
 
@@ -58,5 +57,6 @@ class CorController extends Controller
         $cor->delete();
 
         return "<script>alert('Cadastrado com sucesso.')history.back();</script>";
+
     }
 }

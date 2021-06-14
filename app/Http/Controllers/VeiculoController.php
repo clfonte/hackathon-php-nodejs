@@ -14,17 +14,17 @@ class VeiculoController extends Controller
     public function store(Request $request)
     {
         Veiculo::create([
-            'fotodestaque' => $request->fotodestaque,
-            'modelo' => $request->modelo,
-            'anoModelo' => $request->anoModelo,
+            'modelo'        => $request->modelo,
+            'anoModelo'     => $request->anoModelo,
             'anoFabricacao' => $request->anoFabricacao,
-            'valor' => $request->valor,
-            'tipo' => $request->tipo,
-            'opicional' => $request->opicional,
-            'cor_id' => $request->cor_id,
-            'marca_id' => $request->marca_id,
-            'usuario_id' => $request->usuario_id,
-        ]); 
-        return "Marca cadastrada com Sucesso!";
+            'valor'         => $request->valor,
+            'tipo'          => $request->tipo,
+            'opicional'     => $request->opicional,
+            'fotoDestaque'  => $request->fotoDestaque,
+            'cor_id'        => $request->cor_id,
+            'marca_id'      => $request->marca_id,
+            'usuario_id'    => $request->usuario_id,
+        ]);
+        return "Veículo cadastrado com Sucesso!";
     }
 }
