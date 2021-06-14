@@ -45,12 +45,11 @@
                 </div>
               </div>
             </div>
-          </div>
         </tr>
         @endforeach
       </tbody>
     </table>
-    <a class="btn btn-primary" href="{{route('registrar_marca')}}">Cadastrar</a>
+    <a class="btn btn-primary" href="{{view('layout_cadasstro')}}">Cadastrar</a>
   </div>
 
 

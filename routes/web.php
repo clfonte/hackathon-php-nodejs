@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/marca/novo', 'MarcaController@create');
+Route::get('/marca/novo', 'MarcaController@create')->name('layout_cadasstro');
 Route::get('/marca/listar', 'MarcaController@read');
 Route::post('/marca/listar', 'MarcaController@store')->name('registrar_marca');
 Route::get('/marca/edit/{id}', 'MarcaController@edit')->name('editarm');
