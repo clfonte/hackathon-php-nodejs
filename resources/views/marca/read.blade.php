@@ -49,7 +49,7 @@
         @endforeach
       </tbody>
     </table>
-    <a class="btn btn-primary" href="{{view('layout_cadasstro')}}">Cadastrar</a>
+    <a class="btn btn-primary" href="{{route('layout_cadastro')}}">Cadastrar</a>
   </div>
 
 

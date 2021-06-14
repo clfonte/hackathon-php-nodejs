@@ -27,9 +27,11 @@ class MarcaController extends Controller
     public function store(Request $request)
     {
         Marca::create([
-            'nome' => $request->nome,
+            'marca' => $request->nome,
         ]);
         return view('marca.read');
+
+    
     }
 
     //levar os dados para a tela de edição
