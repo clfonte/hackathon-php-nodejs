@@ -13,10 +13,6 @@ class CorController extends Controller
         return view('cor.create');
     }
 
-<<<<<<< HEAD
-=======
-    //resgatar os dados para listar
->>>>>>> dd2eabfb78c10421e370f5064861ae54bd47993b
     public function read()
     {
 
@@ -51,9 +47,6 @@ class CorController extends Controller
         Cor::create([
             'cor' => $request->cor,
         ]);
-<<<<<<< HEAD
-        return "Cor cadastrada com Sucesso!";
-=======
         return "<script>alert('Cadastrado com sucesso.')history.back();</script>";
     }
 
@@ -64,6 +57,6 @@ class CorController extends Controller
         $cor->delete();
 
         return "<script>alert('Cadastrado com sucesso.')history.back();</script>";
->>>>>>> dd2eabfb78c10421e370f5064861ae54bd47993b
+
     }
 }

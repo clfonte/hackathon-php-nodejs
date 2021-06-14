@@ -51,7 +51,7 @@
 
 <body>
   <div class="container">
-<<<<<<< HEAD
+
     <table class="table table-hover">
       <h3 class="mt-3 text-info">Listagem de Cores</h3>
 
@@ -81,7 +81,6 @@
       </table>
     
   </div>
-=======
     <table class="table table-striped">
       <thead>
         <tr>#</tr>
@@ -101,7 +100,6 @@
     <a class="btn btn-primary" href="{{route('registrar_cor')}}">Cadastrar</a>
   </div>
   
->>>>>>> dd2eabfb78c10421e370f5064861ae54bd47993b
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
