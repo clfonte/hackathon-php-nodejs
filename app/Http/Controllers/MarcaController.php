@@ -29,7 +29,7 @@ class MarcaController extends Controller
         Marca::create([
             'nome' => $request->nome,
         ]);
-        return "Marca cadastrada com Sucesso!";
+        return view('marca.read');
     }
 
     //levar os dados para a tela de edição
@@ -49,7 +49,7 @@ class MarcaController extends Controller
         $marca->update([
             'marca' => $request->marca
         ]);
-        return "<script>alert('Editado com sucesso.')history.back();</script>";
+        return view('marca.read');
     }
 
     //Deletar
@@ -57,5 +57,7 @@ class MarcaController extends Controller
     {
         $marca = Marca::findOrFail($id);
         $marca->delete();
+
+        return view('marca.read');
     }
 }
