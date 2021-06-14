@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -53,6 +54,15 @@
         </div>
       </div>
     </nav>
+=======
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Cadastro - Cor</title>
+>>>>>>> dd2eabfb78c10421e370f5064861ae54bd47993b
 </head>
 
 <body>
