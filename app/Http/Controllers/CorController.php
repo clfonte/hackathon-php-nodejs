@@ -7,7 +7,7 @@ use App\Cor;
 
 class CorController extends Controller
 {
-    //criar dados
+    //criar dados - enviar para o form de cadastro
     public function create()
     {
         return view('cor.create');
@@ -19,7 +19,6 @@ class CorController extends Controller
         $cor = Cor::all();
         return view('cor.read', compact('cor'));
     }
-
 
     //levar os dados para a tela de edição
     public function edit($id)
@@ -57,6 +56,5 @@ class CorController extends Controller
         $cor->delete();
 
         return "<script>alert('Cadastrado com sucesso.')history.back();</script>";
-
     }
 }

@@ -64,10 +64,13 @@
                     <tr>
                         <td>{{ $c->id }}</td>
                         <td>{{ $c->cor }}</td>
-                        <td><a class="btn btn-outline-info"
-                                href="{{ route('excluir_marca', ['id' => $c->id]) }}">Editar</a>
+                        <td><a class="btn btn-outline-info" href="{{ route('editarc', ['id' => $c->id]) }}">Editar</a>
                         </td>
-                        <td><a class="btn btn-outline-danger" data-bs-toggle="modal" href="">Deletar</a></td>
+                        <td>
+                            <a class="btn btn-outline-danger" href="{{ route('excluir_cor', ['id' => $c->id]) }}">
+                                Deletar
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

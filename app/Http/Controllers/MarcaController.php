@@ -27,11 +27,9 @@ class MarcaController extends Controller
     public function store(Request $request)
     {
         Marca::create([
-            'marca' => $request->nome,
+            'marca' => $request->marca,
         ]);
         return 'cadastrado';
-
-    
     }
 
     //levar os dados para a tela de edição
@@ -52,13 +50,13 @@ class MarcaController extends Controller
         $marca->update([
             'marca' => $request->marca
         ]);
-        return 'editado';
+        return "<script>alert('Editado com sucesso.')history.back();</script>";
     }
 
     //Deletar
-    public function destroy($id)
+    public function delete($id)
     {
-        $marca = Marca::findOrFail($id);
+        $marca = Marca::findOne($id);
         $marca->delete();
 
         return 'deletado';
