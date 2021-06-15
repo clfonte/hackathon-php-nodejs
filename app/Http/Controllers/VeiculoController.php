@@ -14,7 +14,7 @@ class VeiculoController extends Controller
     //inicio de cadastro
     public function create()
     {
-        return view('veiculo.create'); 
+        return view('veiculo.create');
     }
     public function store(Request $request)
     {
@@ -22,9 +22,9 @@ class VeiculoController extends Controller
 
         $marca_id = Marca::find($request->marca);
 
-        Veiculo::create([  
+        Veiculo::create([
 
-            'modelo'        => $request->modelo, 
+            'modelo'        => $request->modelo,
             'anoModelo'     => $request->anoModelo,
             'anoFabricacao' => $request->anoFabricacao,
             'valor'         => $request->valor,
@@ -80,13 +80,12 @@ class VeiculoController extends Controller
     ////////////////////////////////////
     ////////// fim de edição ///////////
     ////////////////////////////////////
-     //Deletar
-     public function destroy($id)
-     {
-         $veiculo = Veiculo::findOrFail($id);
-         $veiculo->delete();
- 
-         return "deletado";
- 
-     }
+    //Deletar
+    public function destroy($id)
+    {
+        $veiculo = Veiculo::findOrFail($id);
+        $veiculo->delete();
+
+        return "deletado";
+    }
 }
