@@ -54,11 +54,11 @@ class MarcaController extends Controller
     }
 
     //Deletar
-    public function delete($id)
+    public function destroy($id)
     {
-        $marca = Marca::findOne($id);
+        $marca = Marca::findOrFail($id);
         $marca->delete();
 
-        return view('marca.read');
+        return redirect('marca/listar');
     }
 }

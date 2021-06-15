@@ -82,12 +82,12 @@
                                         <h5 class="modal-title" id="exampleModalLabel">Atenção!</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close">
-                                            <span aria-hidden="true">×</span>
+                                            <span aria-hidden="true"></span>
                                         </button>
                                     </div>
 
                                     <div class="modal-body">
-                                        Tem certeza que deseja excluir essa marca?
+                                        Tem certeza que deseja excluir essa cor?
                                     </div>
                                     <div class="modal-footer">
                                         <a class="btn btn-outline-danger"

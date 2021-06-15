@@ -37,7 +37,7 @@ class CorController extends Controller
         $cor->update([
             'cor' => $request->cor
         ]);
-        return "<script>alert('Editado com sucesso.')history.back();</script>";
+        return redirect('cor/listar');
     }
 
     // Cadastrar
