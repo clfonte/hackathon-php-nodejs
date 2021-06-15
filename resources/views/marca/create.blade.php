@@ -64,12 +64,14 @@
                 </label>
 
                 <input type="text" id="marca" name="marca" class="form-control" alt="Marca" required
-                    data-parsley-required-message="Marca não pode ficar em branco" placeholder="marca">
+                    data-parsley-required-message="Marca não pode ficar em branco" placeholder="Informe a marca...">
             </div>
 
             <button class="btn btn-outline-info mt-3">
                 Salvar
             </button>
+
+            <a class="btn btn-outline-danger mt-3" href="/marca/listar">Cancelar</a>
         </form>
     </div>
 </body>

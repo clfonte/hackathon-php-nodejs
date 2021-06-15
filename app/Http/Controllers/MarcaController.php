@@ -29,7 +29,7 @@ class MarcaController extends Controller
         Marca::create([
             'marca' => $request->marca,
         ]);
-        return 'cadastrado';
+        return redirect('marca/listar');
     }
 
     //levar os dados para a tela de edição
@@ -50,7 +50,7 @@ class MarcaController extends Controller
         $marca->update([
             'marca' => $request->marca
         ]);
-        return "<script>alert('Editado com sucesso.')history.back();</script>";
+        return redirect('marca/listar');
     }
 
     //Deletar

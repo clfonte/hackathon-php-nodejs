@@ -87,7 +87,7 @@
                                         <h5 class="modal-title" id="exampleModalLabel">Atenção!</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close">
-                                            <span aria-hidden="true">×</span>
+                                            <span aria-hidden="true"></span>
                                         </button>
                                     </div>
 
@@ -108,7 +108,9 @@
                 @endforeach
             </tbody>
         </table>
-        <a class="btn btn-outline-info mb-3" href="{{ route('registrar_marca') }}">Cadastrar</a>
+        <a class="btn btn-outline-info mb-3" href="{{ route('registrar_marca') }}">
+            Cadastrar
+        </a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>

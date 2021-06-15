@@ -71,7 +71,7 @@
                     <b>Cor</b>
                 </label>
                 <input type="text" id="cor" name="cor" class="form-control" alt="Cor" required
-                    data-parsley-required-message="Cor não pode ficar em branco" placeholder="Cor">
+                    data-parsley-required-message="Cor não pode ficar em branco" placeholder="Insira a cor...">
             </div>
 
             <button type="submit" class="btn btn-outline-info mt-3">
