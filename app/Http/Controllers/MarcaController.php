@@ -59,6 +59,6 @@ class MarcaController extends Controller
         $marca = Marca::findOne($id);
         $marca->delete();
 
-        return 'deletado';
+        return view('marca.read');
     }
 }

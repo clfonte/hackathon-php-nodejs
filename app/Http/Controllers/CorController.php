@@ -46,7 +46,7 @@ class CorController extends Controller
         Cor::create([
             'cor' => $request->cor,
         ]);
-        return "<script>alert('Cadastrado com sucesso.')history.back();</script>";
+        return redirect('cor/listar');
     }
 
     //Deletar
@@ -55,6 +55,6 @@ class CorController extends Controller
         $cor = Cor::findOrFail($id);
         $cor->delete();
 
-        return "<script>alert('Cadastrado com sucesso.')history.back();</script>";
+        return redirect('cor/listar');
     }
 }

@@ -22,19 +22,11 @@
                 @foreach ($marca as $m)
                     <tr>
                         <td>{{ $m->marca }}</td>
-                        <td>
-                            <a class="btn btn-warning" href="{{ route('editarm', ['id' => $m->id]) }}">
-                                Editar
-                            </a>
-                        </td>
-
-                        <td>
-                            <a type="button" class="btn btn-danger"
-                                href="{{ route('excluir_marca', ['id' => $m->id]) }}" data-bs-toggle="modal">
+                        <td><a class="btn btn-warning" href="{{ route('editarm', ['id' => $m->id]) }}">Editar</a></td>
+                        <td><button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
                                 Deletar
-                            </a>
-                        </td>
-
+                            </button></td>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
@@ -50,8 +42,8 @@
                                             Tem certeza que deseja excluir essa marca ?
                                         </div>
                                         <div class="modal-footer">
-                                            <a class="btn btn-danger" data-bs-dismiss="modal"
-                                                href="{{ route('excluir_marca', ['id' => $m->id]) }}">Sim</a>
+                                            <button type="button" class="btn btn-danger"
+                                                data-bs-dismiss="modal">Sim</button>
                                             <button type="button" class="btn btn-secondary"
                                                 data-bs-dismiss="modal">Não</button>
                                     </form>
