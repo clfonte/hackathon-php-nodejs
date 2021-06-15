@@ -41,6 +41,7 @@
 
 <body>
 
+
   <div class="container">
     <form action="{{ route('editar_cor', ['id' => $cor->id]) }}" method="POST">
       @csrf

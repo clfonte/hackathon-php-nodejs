@@ -7,12 +7,14 @@ use App\Marca;
 use App\Veiculo;
 use Illuminate\Http\Request;
 
+
+
 class VeiculoController extends Controller
 {
     //inicio de cadastro
     public function create()
     {
-        return view('veiculo.create');
+        return view('veiculo.create'); 
     }
     public function store(Request $request)
     {

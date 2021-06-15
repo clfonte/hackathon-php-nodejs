@@ -32,6 +32,8 @@ Route::post('/cor/edit/{id}', 'CorController@update')->name('editar_cor');
 Route::post('/cor/novo', 'CorController@store')->name('registrar_cor');
 
 
+
+
 Route::get('/veiculo/novo', 'VeiculoController@create')->name('layout_cadastro');
 Route::get('/veiculo/listar', 'VeiculoController@read');
 Route::post('/veiculo/novo', 'VeiculoController@store')->name('registrar_veiculo');

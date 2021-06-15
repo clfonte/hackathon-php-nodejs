@@ -65,6 +65,7 @@
                 <th>Usuario</th>
                 <th>Editar</th>
                 <th>Excluir</th>
+                
             </thead>
             <tbody>
                 @foreach ($veiculo as $v)

@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
+
+    <!-- Requireds meta tags  -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -105,6 +107,7 @@
                             <option class="Disabled">Selecione a cor...</option>
                         </select>
                     </div>
+                    
 
                     <div class="col-12 col-md-4 mt-3">
                         <label for="marca_id"><b>Marca</b></label>
