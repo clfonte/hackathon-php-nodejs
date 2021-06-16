@@ -56,7 +56,9 @@
     <div class="container">
         <form action="{{ route('registrar_marca') }}" method="POST">
             @csrf
+
             <h3 class="mt-3 text-info">Cadastro De Marca</h3>
+
             {{-- LINHA 1 --}}
             <div class="col-12 col-md-8">
                 <label for="marca">

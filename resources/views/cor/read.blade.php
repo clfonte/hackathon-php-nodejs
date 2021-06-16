@@ -95,10 +95,10 @@
                                         <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">
                                             Não
                                         </button>
-
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </tr>
                 @endforeach
             </tbody>
@@ -106,9 +106,10 @@
         <a class="btn btn-outline-info mb-3" href="{{ route('registrar_cor') }}">Cadastrar</a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
 
 </html>

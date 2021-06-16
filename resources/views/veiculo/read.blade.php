@@ -52,7 +52,9 @@
 <body>
     <div class="container">
         <table class="table table-striped table-hover">
+
             <h3 class="mt-3 text-info">Listagem de Veiculos</h3>
+
             <thead>
                 <th class="mt-3">Modelo</th>
                 <th>Ano/Modelo</th>
@@ -65,35 +67,40 @@
                 <th>Usuario</th>
                 <th>Editar</th>
                 <th>Excluir</th>
-                
             </thead>
+
             <tbody>
                 @foreach ($veiculo as $v)
                     <tr>
                         <td>{{ $v->modelo }}</td>
                         <td>{{ $v->anoModelo }}</td>
                         <td>{{ $v->anoFabricacao }}</td>
-                         <td>{{ $v->valor }}</td>
+                        <td>{{ $v->valor }}</td>
                         <td>{{ $v->tipo }}</td>
                         <td>{{ $v->opicional }}</td>
                         <td>{{ $v->fotoDestaque }}</td>
                         <td>{{ $v->cor_id }}</td>
                         <td>{{ $v->marca_id }}</td>
                         <td>{{ $v->usuario_id }}</td>
-                        <td><a class="btn btn-outline-info"
-                                href="{{ route('excluir_veiculo', ['id' => $c->id]) }}">Editar</a>
+                        <td><a class="btn btn-outline-info" href="{{ route('excluir_veiculo', ['id' => $c->id]) }}">
+                                Editar
+                            </a>
                         </td>
-                        <td><a class="btn btn-outline-danger" data-bs-toggle="modal" href="">Deletar</a></td>
+                        <td>
+                            <a class="btn btn-outline-danger" data-bs-toggle="modal" href="">
+                                Deletar
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
         <a class="btn btn-outline-info mb-3" href="{{ route('registrar_veiculo') }}">Cadastrar</a>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
 
 </html>

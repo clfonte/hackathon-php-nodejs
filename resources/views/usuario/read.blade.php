@@ -3,7 +3,6 @@
 
 <head>
     <!-- Requireds meta tags  -->
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -56,7 +55,9 @@
 <body>
     <div class="container">
         <table class="table table-striped table-hover">
+
             <h3 class="mt-3 text-info">Listagem de Usuários</h3>
+
             <thead>
                 <th>#</th>
                 <th class="mt-3">Nome</th>
@@ -64,6 +65,7 @@
                 <th>Editar</th>
                 <th>Excluir</th>
             </thead>
+
             <tbody>
                 @foreach ($usuario as $u)
                     <tr>
@@ -104,10 +106,10 @@
                                         <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">
                                             Não
                                         </button>
-
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </tr>
                 @endforeach
             </tbody>

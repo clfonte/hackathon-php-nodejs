@@ -54,23 +54,25 @@
 <body>
     <div class="container">
         <table class="table table-striped table-hover">
+
             <h3 class="mt-3 text-info">Listagem de Marcas</h3>
+
             <thead>
                 <th>#</th>
                 <th class="mt-3">Marcas</th>
                 <th>Editar</th>
                 <th>Excluir</th>
             </thead>
+
             <tbody>
                 @foreach ($marca as $m)
                     <tr>
                         <td>{{ $m->id }}</td>
                         <td>{{ $m->marca }}</td>
                         <td>
-                            <a class="btn btn-outline-info" href="{{ route('editarm', ['id' => $m->id]) }}">
-                                Editar
-                            </a>
+                            <a class="btn btn-outline-info" href="{{ route('editarm', ['id' => $m->id]) }}">Editar</a>
                         </td>
+
                         <td>
                             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
@@ -104,6 +106,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </tr>
                 @endforeach
             </tbody>
