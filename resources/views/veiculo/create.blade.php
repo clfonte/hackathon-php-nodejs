@@ -57,7 +57,7 @@
 <body>
     <div class="container">
         <div class="row mb-3">
-            <form action="{{ route('registrar_veiculo') }}" method="POST">
+            <form action="{{ route('registrar_veiculo') }}" enctype="multipart/form-data"  method="POST">
                 <div class="row mb-3">
                     @csrf
                     <h1 class="mt-3 text-info">Cadastro De Veículos</h1>
@@ -107,9 +107,9 @@
                         </label>
 
                         <select class="form-control" name="cor_id" id="cor_id">
-                            {{-- @foreach ($cor_id as $cor)
-                                <option value="{{$cor}}"> {{$cor}}</option>
-                            @endforeach --}}
+                             @foreach ($cor as $c)
+                                <option value="{{$c->id}}"> {{$c->cor}}</option>
+                            @endforeach 
                         </select>
                     </div>
 
@@ -117,6 +117,9 @@
                         <label for="marca_id"><b>Marca</b></label>
                         <select class="form-select" name="marca_id" id="marca_id">
                             <option class="Disabled">Selecione a marca...</option>
+                            @foreach ($marca as $m)
+                                <option value="{{$m->id}}"> {{$m->marca}}</option>
+                            @endforeach 
                         </select>
                     </div>
 
@@ -133,7 +136,7 @@
                         <!-- guarda o nome do arquivo para quando editar -->
                         <input type="hidden" name="arquivo">
                         <input type="file" name="arquivo" id="arquivo" class="form-control"
-                            accept=".jpg, .jpeg, .docx, .pdf, .doc, .odt" <?= $r ?> placeholder="Selecione o arquivo da atividade">
+                            accept=".jpg, .jpeg, .docx, .pdf" <?= $r ?> placeholder="Selecione o arquivo do veiculo">
                     </div>
 
                     <div class="col-12 col-md-4 mt-3">
@@ -155,12 +158,12 @@
                     </select>
                     </div> --}}
                 </div>
-            </form>
-        </div>
-          
         <button type="submit" class="btn btn-outline-info mb-3">
           Salvar Dados
         </button>
+            </form>
+        </div>
+          
   </div>
       
 </body>

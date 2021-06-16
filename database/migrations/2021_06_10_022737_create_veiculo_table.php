@@ -20,11 +20,11 @@ class CreateVeiculoTable extends Migration
             $table->year('anoFabricacao');
             $table->double('valor');
             $table->string('tipo');
-            $table->string('fotodestaque');
-            $table->string('opcional');
+            $table->string('img_itens');
+            $table->string('descricao');
             $table->integer('cor_id');
             $table->integer('marca_id');
-            // $table->integer('usuario_id');
+            $table->integer('usuario_id');
             $table->string('updated_at');
             $table->string('created_at');
         });

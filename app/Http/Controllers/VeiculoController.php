@@ -14,30 +14,48 @@ class VeiculoController extends Controller
     //inicio de cadastro
     public function create()
     {
-        return view('veiculo.create');
+        $cor = Cor::all();
+        $marca = Marca::All();
+        return view('veiculo.create', compact('cor','marca'));
     }
+
     public function store(Request $request)
     {
-        $cor_id = Cor::find($request->cor);
-
-        $marca_id = Marca::find($request->marca);
-
-        Veiculo::create([
-
-            'modelo'        => $request->modelo,
-            'anoModelo'     => $request->anoModelo,
+        // Handle File Upload
+        if($request->hasFile('img_itens')){
+            // Get filename with the extension
+            $filenameWithExt = $request->file('img_itens')->getClientOriginalName();
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('img_itens')->getClientOriginalExtension();
+            // Filename to store
+            $fileNameToStore= $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('img_itens')->storeAs('public/img_itens', $fileNameToStore);
+        } else {
+            $fileNameToStore = 'noimage.png';
+        }
+        //save in database
+        $itens = Veiculo::create([
+            'modelo' => $request->modelo,
+            'anoModelo' => $request->anoModelo,
             'anoFabricacao' => $request->anoFabricacao,
-            'valor'         => $request->valor,
-            'tipo'          => $request->tipo,
-            'opicional'     => $request->opicional,
-            'fotoDestaque'  => $request->fotoDestaque->store('public'),
-            'cor_id'        => $request->cor_id->associate($cor_id),
-            'marca_id'      => $request->marca_id->associate($marca_id),
-            'usuario_id'    => $request->usuario_id,
+            'valor' => $request->valor,
+            'tipo' => $request->tipo,
+            'descricao' => $request->descricao,
+            'cor_id' => $request->cor_id,
+            'marca_id' => $request->marca_id,
+            'img_itens' => $fileNameToStore
         ]);
-        return "Veículo cadastrado com Sucesso!";
+        $request->session()->flash(
+            'mensagem',
+            "Item {$itens->id} criad@ com sucesso {$itens->nome}"
+        );
+        return  redirect()->route('listar_itens');
     }
-    //fim de cadastro
+
+
     //listar
     public function read()
     {
