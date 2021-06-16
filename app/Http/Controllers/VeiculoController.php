@@ -14,10 +14,14 @@ class VeiculoController extends Controller
     //inicio de cadastro
     public function create()
     {
-        return view('veiculo.create');
+        $cor = Cor::all();
+        $marca = Marca::All();
+        return view('veiculo.create', compact('cor', 'marca'));
     }
+
     public function store(Request $request)
     {
+        // dd($request->all());
         $cor_id = Cor::find($request->cor);
 
         $marca_id = Marca::find($request->marca);
@@ -35,9 +39,11 @@ class VeiculoController extends Controller
             'marca_id'      => $request->marca_id->associate($marca_id),
             'usuario_id'    => $request->usuario_id,
         ]);
+
         return "Veículo cadastrado com Sucesso!";
     }
     //fim de cadastro
+
     //listar
     public function read()
     {

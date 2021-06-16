@@ -31,6 +31,13 @@ Route::get('/cor/edit/{id}', 'CorController@edit')->name('editarc');
 Route::post('/cor/edit/{id}', 'CorController@update')->name('editar_cor');
 Route::get('/cor/listar/{id}', 'CorController@destroy')->name('excluir_cor');
 
+// rotas pra usuario
+Route::get('/usuario/novo', 'UsuarioController@create');
+Route::get('/usuario/listar', 'UsuarioController@read');
+Route::post('/usuario/novo', 'UsuarioController@store')->name('registrar_usuario');
+Route::get('/usuario/edit/{id}', 'UsuarioController@edit')->name('editaru');
+Route::post('/usuario/edit/{id}', 'UsuarioController@update')->name('editar_usuario');
+Route::get('/usuario/delete/{id}', 'UsuarioController@destroy')->name('excluir_usuario');
 
 Route::get('/veiculo/novo', 'VeiculoController@create')->name('layout_cadastro');
 Route::get('/veiculo/listar', 'VeiculoController@read');

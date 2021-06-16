@@ -9,5 +9,6 @@ class Usuario extends Model
 {
     use SoftDeletes;
 
+    protected $fillable = ['nome', 'login', 'senha'];
     protected $table = 'usuario';
 }
