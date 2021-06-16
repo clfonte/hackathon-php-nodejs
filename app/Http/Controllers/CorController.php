@@ -27,7 +27,6 @@ class CorController extends Controller
         return view('cor.edit', ['cor' => $cor]);
     }
 
-
     //editar os dados
     public function update(Request $request, $id)
     {

@@ -1,63 +1,61 @@
 <!doctype html>
 <html lang="en">
 
+
 <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{ asset('icon.png') }}">
 
-        <link rel="icon" href="{{ asset('icon.png') }}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Cadastro - Cor</title>
 
-        <title>Cadastro - Cor</title>
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <nav class="navbar navbar-light bg-light">
-                    <div class="container">
-                        <a class="navbar-brand" href="http://localhost:8000">
-                            <img src="{{ asset('logo.png') }}" alt="" width="65" height="45">
-                        </a>
-                    </div>
-                </nav>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="http://localhost:8000">
-                                <b>Início</b>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page">
-                                <b>Cadastros</b>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="http://localhost:3000"><b>Catálogo</b></a>
-                        </li>
-
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Pesquisa" aria-label="Search">
-                        <button class="btn btn-outline-info" type="submit">Pesquisa</button>
-                    </form>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="http://localhost:8000">
+                        <img src="{{ asset('logo.png') }}" alt="" width="65" height="45">
+                    </a>
                 </div>
-            </div>
-        </nav>
+            </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-    </head>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://localhost:8000">
+                            <b>Início</b>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">
+                            <b>Cadastros</b>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://localhost:3000"><b>Catálogo</b></a>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisa" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Pesquisa</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</head>
 
 <body>
 

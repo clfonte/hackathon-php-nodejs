@@ -9,5 +9,6 @@ class Cor extends Model
 {
     use SoftDeletes;
 
+    protected $fillable = ['cor', 'update_up', 'created_up'];
     protected $table = 'cor';
 }

@@ -9,5 +9,6 @@ class Veiculo extends Model
 {
     use SoftDeletes;
 
+    protected $fillable = ['modelo', 'anoModelo', 'anoFabricacao', 'valor', 'tipo', 'fotoDestaque', 'opcional', 'cor_id', 'marca_id', 'usuario_id'];
     protected $table = 'veiculo';
 }

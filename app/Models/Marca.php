@@ -9,5 +9,6 @@ class Marca extends Model
 {
     use SoftDeletes;
 
+    protected $fillable = ['marca', 'update_up', 'created_up'];
     protected $table = 'marca';
 }

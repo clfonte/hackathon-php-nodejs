@@ -14,7 +14,6 @@ class MarcaController extends Controller
         return view('marca.create');
     }
 
-
     //listar
     public function read()
     {
@@ -38,7 +37,6 @@ class MarcaController extends Controller
         $marca = Marca::findOrFail($id);
         return view('marca.edit', ['marca' => $marca]);
     }
-
 
     //editar os dados
     public function update(Request $request, $id)

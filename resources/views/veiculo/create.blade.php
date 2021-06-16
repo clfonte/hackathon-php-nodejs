@@ -105,49 +105,48 @@
                         <label for="cor_id">
                             <b>Cor</b>
                         </label>
-
-                        <select class="form-control" name="cor_id" id="cor_id">
-                            {{-- @foreach ($cor_id as $cor)
-                                <option value="{{$cor}}"> {{$cor}}</option>
-                            @endforeach --}}
+                        <select class="form-select" name="marca_id" id="marca_id">
+                            @foreach ($cor as $c)
+                                <option class="Disabled">Selecione a cor...</option>
+                                <option value="{{ $c->cor }}">{{ $c->cor }}</option>
+                            @endforeach
                         </select>
+
                     </div>
 
                     <div class="col-12 col-md-4 mt-3">
                         <label for="marca_id"><b>Marca</b></label>
                         <select class="form-select" name="marca_id" id="marca_id">
-                            <option class="Disabled">Selecione a marca...</option>
+                            @foreach ($marca as $m)
+                                <option class="Disabled">Selecione a marca...</option>
+                                <option value="{{ $m->marca }}">{{ $m->marca }}</option>
+                            @endforeach
                         </select>
                     </div>
 
-                    <div class="col-12 col-md-4 mt-3">
-                        <?php
-                        $r = 'required data-parsley-required-message="Selecione uma foto"';
-                        //vai mostrar que o campo é requirido por padrão, a não ser que seja uma edição
-                        //se não tiver vazio o ID, quer dizer que é inserção e não aparece o required
-                        if (!empty($id)) {
-                        $r = '';
-                        }
-                        ?>
-                        <label for="arquivo"><b>Arquivo</b></label>
-                        <!-- guarda o nome do arquivo para quando editar -->
-                        <input type="hidden" name="arquivo">
-                        <input type="file" name="arquivo" id="arquivo" class="form-control"
-                            accept=".jpg, .jpeg, .docx, .pdf, .doc, .odt" <?= $r ?> placeholder="Selecione o arquivo da atividade">
-                    </div>
+                    {{-- <div class="col-12 col-md-4 mt-3">
+                        <label for="foto">Foto</label>
+                        <input class="form-control @error('foto') is-invalid @enderror" type="file" id="foto"
+                            name="foto">
+                        @error('foto')
+                            <div class="invalid-feedback">
+                            </div>
+                        @enderror
+                    </div> --}}
 
                     <div class="col-12 col-md-4 mt-3">
-                    <label for="descricao" class="form-label"><b>Descrição</b> (Opcional)</label>
-                    <textarea type="text" id="descricao" name="descricao" class="form-control" placeholder="Descrição"></textarea>
+                        <label for="descricao" class="form-label"><b>Descrição</b> (Opcional)</label>
+                        <textarea type="text" id="descricao" name="descricao" class="form-control"
+                            placeholder="Descrição"></textarea>
                     </div>
-  
-  
+
+
                     {{-- <div class="col-12 col-md-4 mt-3">
                     <label for="formFile" class="form-label"></label>
                     <input class="form-control" type="file" name="fotoDestaque" id="formFile">
                     </div> --}}
 
-            
+
                     {{-- <div class="col-auto">
                     <label class="visually-hidden" for="autoSizingSelect">Preference</label>
                     <select class="form-select" name="usuario_id" id="autoSizingSelect">
@@ -155,14 +154,15 @@
                     </select>
                     </div> --}}
                 </div>
+
+                <button type="submit" class="btn btn-outline-info mb-3">
+                    Salvar Dados
+                </button>
             </form>
         </div>
-          
-        <button type="submit" class="btn btn-outline-info mb-3">
-          Salvar Dados
-        </button>
-  </div>
-      
+
+    </div>
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
