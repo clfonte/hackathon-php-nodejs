@@ -36,7 +36,7 @@
               async function getContent() {
                   try {
                       //fazendo conexao com API
-                      const response = await fetch('https://60c80edcafc88600179f60be.mockapi.io/api/v1/veiculo')
+                      const response = await fetch('http://localhost:3000/veiculos')
                       const data = await response.json()
                       //mostrando as informações salvas 
                       show(data)

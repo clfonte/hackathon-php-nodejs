@@ -10,6 +10,8 @@ const novosRouter = require('./routes/novos');
 const seminovosRouter = require('./routes/seminovos');
 const detalhesRouter = require('./routes/detalhes');
 
+const ControllerVeiculo = require('./controller/ControllerVeiculo');
+
 const app = express();
 
 // view engine setup
@@ -28,6 +30,7 @@ app.use('/novos', novosRouter);
 app.use('/seminovos', seminovosRouter);
 app.use('/detalhes', detalhesRouter);
 
+app.get('/veiculos', ControllerVeiculo.findAll);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
