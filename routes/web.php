@@ -47,3 +47,4 @@ Route::post('/veiculo/edit/{id}', 'VeiculoController@update')->name('editar_veic
 Route::get('/veiculo/delete/{id}', 'VeiculoController@destroy')->name('excluir_veiculo');
 
 Route::get('/api', [ApiController::class, 'index']);
+

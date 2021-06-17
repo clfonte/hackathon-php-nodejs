@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./componentes/head') %>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Jpec Veículos</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.jpg">
+    <link rel="stylesheet" href="stylesheets/css/plugins.css"> 
+    <link rel="stylesheet" href="stylesheets/css/style.css">
+    <link rel="stylesheet" href="stylesheets/css/custom.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="css/style.css" rel="stylesheet" >
+    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+  </head>
+  <componentes>
+    <header><%- include('./componentes/header') %></header>
+
+
+    <div class="p-5 mx-auto max-w-screen-xl">
+      <h2 class="font uppercase text-xl pb-4">Novos</h2>
+    </div>
+    
+    <main>
+
+        <div class="bg-gray-200">
+        <section class="py-5 mx-auto max-w-screen-xl sm:flex flex-grow-0 sm:p-5">
+        <article class="flex-row justify-center inline-flex self-stretch p-6 mr-3">
+          
+           <script>
+
+              async function getContent() {
+                  try {
+                      //fazendo conexao com API
+                      const response = await fetch('https://60c80edcafc88600179f60be.mockapi.io/api/v1/veiculo')
+                      const data = await response.json()
+                      //mostrando as informações salvas 
+                      show(data)
+                  } catch (error) {
+                      console.log(error)
+                  }
+              }
+              getContent()
+              
+              function show(users) {
+                  let nome = ''
+                  let id = ''
+                  let i = 0
+                  //users = users.slice(0,4);// users é o array, o 0 é em qual elemento do array você quer que ele comece o 4 é aquantidade maxima de items que voce quer que o array tenha.
+                  // uma dica para voces, é fazer um sort() porque se nao sempre vai mostrar os mesmos 4 items,  
+                  
+                  users = users.sort(() => {return 0.5 - Math.random()}).slice(0, 4);
+
+                  while (users.length > i) {
+                      for (let user of users) {
+                          id = user.id
+                     nome = `
+                     <div class="card" style="width: 18rem;
+                      heigth:18rem;">
+                     <img src="${user.fotoDestaque}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">${user.modelo}</h5>
+                   
+                    <a href="/detalhes">
+                    <button type="button" class="btn btn-primary btn-sm">Detalhes</button>
+                    </a>
+                    </div>
+                    </div>
+              `
+              document.querySelector('article').innerHTML += nome
+                          i++
+                      }
+                  }
+                }
+              
+              </script>
+          </article>
+        </section>
+      </div>
+   
+  </main>
+        
+    <footer class="bg-light fixed-bottom">
+      <%- include('./componentes/footer') %>
+    </footer>
+    </componentes>
+    </html>
+
+    
