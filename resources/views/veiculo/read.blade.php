@@ -29,11 +29,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page">
-                        <b>Cadastros</b>
-                    </a>
-                </li>
+
 
                 <li class="nav-item">
                     <a class="nav-link active" href="http://localhost:3000"><b>Catálogo</b></a>
@@ -55,17 +51,17 @@
             <h3 class="mt-3 text-info">Listagem de Veiculos</h3>
             <thead>
                 <th class="mt-3">Modelo</th>
-                <th>Ano/Modelo</th>
-                <th>ano/Fabricação</th>
+                <th>Ano doModelo</th>
+                <th>Ano de Fabricação</th>
                 <th>Valor</th>
                 <th>Tipo</th>
-                <th>opcional</th>
+                <th>Observação</th>
                 <th>Cor</th>
                 <th>Marca</th>
-                <th>Usuario</th>
+                {{-- <th>Usuario</th> --}}
                 <th>Editar</th>
                 <th>Excluir</th>
-                
+
             </thead>
             <tbody>
                 @foreach ($veiculo as $v)
@@ -73,13 +69,13 @@
                         <td>{{ $v->modelo }}</td>
                         <td>{{ $v->anoModelo }}</td>
                         <td>{{ $v->anoFabricacao }}</td>
-                         <td>{{ $v->valor }}</td>
+                        <td>{{ $v->valor }}</td>
                         <td>{{ $v->tipo }}</td>
                         <td>{{ $v->descricao }}</td>
-                       <!-- <td>{{ $v->fotoDestaque }}</td>-->
+                        <!-- <td>{{ $v->fotoDestaque }}</td>-->
                         <td>{{ $v->cor_id }}</td>
                         <td>{{ $v->marca_id }}</td>
-                        <td>{{ $v->usuario_id }}</td>
+                        {{-- <td>{{ $v->usuario_id }}</td> --}}
                         <td><a class="btn btn-outline-info"
                                 href="{{ route('editarv', ['id' => $v->id]) }}">Editar</a>
                         </td>

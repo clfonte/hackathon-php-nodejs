@@ -37,11 +37,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page">
-                            <b>Cadastros</b>
-                        </a>
-                    </li>
+
 
                     <li class="nav-item">
                         <a class="nav-link active" href="http://localhost:3000"><b>Catálogo</b></a>
