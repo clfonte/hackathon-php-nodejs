@@ -16,15 +16,15 @@ class CreateVeiculoTable extends Migration
         Schema::create('veiculo', function (Blueprint $table) {
             $table->id();
             $table->string('modelo');
-            $table->year('anoModelo');
-            $table->year('anoFabricacao');
-            $table->double('valor');
+            $table->string('anoModelo');
+            $table->string('anoFabricacao');
+            $table->string('valor');
             $table->string('tipo');
-            $table->string('fotodestaque');
-            $table->string('opcional');
-            $table->integer('cor_id');
-            $table->integer('marca_id');
-            // $table->integer('usuario_id');
+          //  $table->string('fotodestaque');
+            $table->string('descricao');
+            $table->string('cor_id');
+            $table->string('marca_id');
+            $table->string('usuario_id');
             $table->string('updated_at');
             $table->string('created_at');
         });

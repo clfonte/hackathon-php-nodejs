@@ -75,15 +75,47 @@
                         <td>{{ $v->anoFabricacao }}</td>
                          <td>{{ $v->valor }}</td>
                         <td>{{ $v->tipo }}</td>
-                        <td>{{ $v->opicional }}</td>
-                        <td>{{ $v->fotoDestaque }}</td>
+                        <td>{{ $v->descricao }}</td>
+                       <!-- <td>{{ $v->fotoDestaque }}</td>-->
                         <td>{{ $v->cor_id }}</td>
                         <td>{{ $v->marca_id }}</td>
                         <td>{{ $v->usuario_id }}</td>
                         <td><a class="btn btn-outline-info"
-                                href="{{ route('excluir_veiculo', ['id' => $c->id]) }}">Editar</a>
+                                href="{{ route('editarv', ['id' => $v->id]) }}">Editar</a>
                         </td>
-                        <td><a class="btn btn-outline-danger" data-bs-toggle="modal" href="">Deletar</a></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Excluir
+                            </button>
+                        </td>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" role="dialog" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Atenção!</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            <span aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        Tem certeza que deseja excluir esse Veiculo?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a class="btn btn-outline-danger"
+                                            href="{{ route('excluir_veiculo', ['id' => $v->id]) }}">Sim</a>
+                                        <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">
+                                            Não
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
                     </tr>
                 @endforeach
             </tbody>

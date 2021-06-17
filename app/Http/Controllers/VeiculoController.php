@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Cor;
 use App\Marca;
 use App\Veiculo;
+use App\Usuario;
 use Illuminate\Http\Request;
 
 
@@ -16,15 +17,16 @@ class VeiculoController extends Controller
     {
         $cor = Cor::all();
         $marca = Marca::All();
-        return view('veiculo.create', compact('cor', 'marca'));
+        $usuario = Usuario::All();
+        return view('veiculo.create', compact('cor', 'marca', 'usuario'));
     }
 
     public function store(Request $request)
     {
-        // dd($request->all());
-        $cor_id = Cor::find($request->cor);
+       // dd($request->all());
+        //$cor_id = Cor::find($request->cor);
 
-        $marca_id = Marca::find($request->marca);
+        //$marca_id = Marca::find($request->marca);
 
         Veiculo::create([
 
@@ -33,14 +35,14 @@ class VeiculoController extends Controller
             'anoFabricacao' => $request->anoFabricacao,
             'valor'         => $request->valor,
             'tipo'          => $request->tipo,
-            'opicional'     => $request->opicional,
-            'fotoDestaque'  => $request->fotoDestaque->store('public'),
-            'cor_id'        => $request->cor_id->associate($cor_id),
-            'marca_id'      => $request->marca_id->associate($marca_id),
+            'descricao'     => $request->descricao,
+            'cor_id'        => $request->cor_id,
+            'marca_id'      => $request->marca_id,
             'usuario_id'    => $request->usuario_id,
+            // 'fotoDestaque'  => $request->fotoDestaque->store('public'),
         ]);
 
-        return "Veículo cadastrado com Sucesso!";
+        return redirect('veiculo/listar');
     }
     //fim de cadastro
 
@@ -60,7 +62,10 @@ class VeiculoController extends Controller
     public function edit($id)
     {
         $veiculo = Veiculo::findOrFail($id);
-        return view('veiculo.edit', ['veiculo' => $veiculo]);
+        $usuario = Usuario::All();
+        $cor = Cor::All();
+        $marca = Marca::All();
+        return view('veiculo.edit', ['veiculo' => $veiculo], compact('cor', 'marca', 'usuario'));
     }
     //editar os dados
     public function update(Request $request, $id)
@@ -75,13 +80,13 @@ class VeiculoController extends Controller
             'anoFabricacao' => $request->anoFabricacao,
             'valor'         => $request->valor,
             'tipo'          => $request->tipo,
-            'opicional'     => $request->opicional,
-            'fotoDestaque'  => $request->fotoDestaque,
+            'descricao'     => $request->descricao,
+            //'fotoDestaque'  => $request->fotoDestaque,
             'cor_id'        => $request->cor_id,
             'marca_id'      => $request->marca_id,
             'usuario_id'    => $request->usuario_id,
         ]);
-        return 'editado';
+        return redirect('veiculo/listar');
     }
     ////////////////////////////////////
     ////////// fim de edição ///////////
@@ -92,6 +97,6 @@ class VeiculoController extends Controller
         $veiculo = Veiculo::findOrFail($id);
         $veiculo->delete();
 
-        return "deletado";
+        return redirect('veiculo/listar');
     }
 }

@@ -43,5 +43,5 @@ Route::get('/veiculo/novo', 'VeiculoController@create')->name('layout_cadastro')
 Route::get('/veiculo/listar', 'VeiculoController@read');
 Route::post('/veiculo/novo', 'VeiculoController@store')->name('registrar_veiculo');
 Route::get('/veiculo/edit/{id}', 'VeiculoController@edit')->name('editarv');
-Route::post('/veiculo/edit/{id}', 'VeiculoController@update')->name('editar_veiuclo');
-Route::post('/veiculo/delete/{id}', 'VeiculoController@destroy')->name('excluir_veiculo');
+Route::post('/veiculo/edit/{id}', 'VeiculoController@update')->name('editar_veiculo');
+Route::get('/veiculo/delete/{id}', 'VeiculoController@destroy')->name('excluir_veiculo');

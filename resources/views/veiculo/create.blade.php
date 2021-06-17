@@ -57,7 +57,7 @@
 <body>
     <div class="container">
         <div class="row mb-3">
-            <form action="{{ route('registrar_veiculo') }}" method="POST">
+            <form action="{{ route('registrar_veiculo') }}" enctype="multipart/form-data" method="POST">
                 <div class="row mb-3">
                     @csrf
                     <h1 class="mt-3 text-info">Cadastro De Veículos</h1>
@@ -105,7 +105,7 @@
                         <label for="cor_id">
                             <b>Cor</b>
                         </label>
-                        <select class="form-select" name="marca_id" id="marca_id">
+                        <select class="form-select" name="cor_id" id="cor_id">
                             @foreach ($cor as $c)
                                 <option class="Disabled">Selecione a cor...</option>
                                 <option value="{{ $c->cor }}">{{ $c->cor }}</option>
@@ -120,6 +120,16 @@
                             @foreach ($marca as $m)
                                 <option class="Disabled">Selecione a marca...</option>
                                 <option value="{{ $m->marca }}">{{ $m->marca }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md-4 mt-3">
+                        <label for="marca_id"><b>Usuario</b></label>
+                        <select class="form-select" name="usuario_id" id="usuario_id">
+                            @foreach ($usuario as $u)
+                                <option class="Disabled">Selecione o Usuario...</option>
+                                <option value="{{ $u->login }}">{{ $u->login }}</option>
                             @endforeach
                         </select>
                     </div>
