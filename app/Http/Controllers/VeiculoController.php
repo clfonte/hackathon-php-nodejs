@@ -23,7 +23,7 @@ class VeiculoController extends Controller
 
     public function store(Request $request)
     {
-       // dd($request->all());
+        // dd($request->all());
         //$cor_id = Cor::find($request->cor);
 
         //$marca_id = Marca::find($request->marca);
@@ -100,11 +100,11 @@ class VeiculoController extends Controller
         return redirect('veiculo/listar');
     }
 
-        //listar
-        public function api()
-        {
-    
-            $veiculo = Veiculo::all();
-            return view('veiculo.api', compact('veiculo'));
-        }
+    //listar
+    public function api()
+    {
+
+        $veiculo = Veiculo::all();
+        return view('veiculo.api', compact('veiculo'));
+    }
 }
