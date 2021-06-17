@@ -18,14 +18,14 @@ Route::get('/', function () {
 });
 
 Route::get('/marca/novo', 'MarcaController@create')->name('layout_cadastro');
-Route::get('/marca/listar', 'MarcaController@read');
+Route::get('/marca/listar', 'MarcaController@read')->name('listar_marca');
 Route::post('/marca/novo', 'MarcaController@store')->name('registrar_marca');
 Route::get('/marca/edit/{id}', 'MarcaController@edit')->name('editarm');
 Route::post('/marca/edit/{id}', 'MarcaController@update')->name('editar_marca');
 Route::get('/marca/listar/{id}', 'MarcaController@destroy')->name('excluir_marca');
 
 Route::get('/cor/novo', 'CorController@create');
-Route::get('/cor/listar', 'CorController@read');
+Route::get('/cor/listar', 'CorController@read')->name('listar_cor');
 Route::post('/cor/novo', 'CorController@store')->name('registrar_cor');
 Route::get('/cor/edit/{id}', 'CorController@edit')->name('editarc');
 Route::post('/cor/edit/{id}', 'CorController@update')->name('editar_cor');
@@ -33,15 +33,17 @@ Route::get('/cor/listar/{id}', 'CorController@destroy')->name('excluir_cor');
 
 // rotas pra usuario
 Route::get('/usuario/novo', 'UsuarioController@create');
-Route::get('/usuario/listar', 'UsuarioController@read');
+Route::get('/usuario/listar', 'UsuarioController@read')->name('listar_usuario');
 Route::post('/usuario/novo', 'UsuarioController@store')->name('registrar_usuario');
 Route::get('/usuario/edit/{id}', 'UsuarioController@edit')->name('editaru');
 Route::post('/usuario/edit/{id}', 'UsuarioController@update')->name('editar_usuario');
 Route::get('/usuario/delete/{id}', 'UsuarioController@destroy')->name('excluir_usuario');
 
 Route::get('/veiculo/novo', 'VeiculoController@create')->name('layout_cadastro');
-Route::get('/veiculo/listar', 'VeiculoController@read');
+Route::get('/veiculo/listar', 'VeiculoController@read')->name('listar_veiculo');
 Route::post('/veiculo/novo', 'VeiculoController@store')->name('registrar_veiculo');
 Route::get('/veiculo/edit/{id}', 'VeiculoController@edit')->name('editarv');
 Route::post('/veiculo/edit/{id}', 'VeiculoController@update')->name('editar_veiculo');
 Route::get('/veiculo/delete/{id}', 'VeiculoController@destroy')->name('excluir_veiculo');
+
+Route::get('/api', [ApiController::class, 'index']);

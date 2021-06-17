@@ -99,4 +99,12 @@ class VeiculoController extends Controller
 
         return redirect('veiculo/listar');
     }
+
+        //listar
+        public function api()
+        {
+    
+            $veiculo = Veiculo::all();
+            return view('veiculo.api', compact('veiculo'));
+        }
 }

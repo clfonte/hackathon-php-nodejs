@@ -12,20 +12,20 @@
   </head>
   <body>
   <div class="jumbotron">
-  <h1 class="display-4">Seja Bem vindo!</h1>
-  <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um determinado conteúdo ou informação.</p>
+  <h1 class="display-4">Bem vindo, Admin!</h1>
+  <p class="lead">Nesse layout voce pode realizar seus cadastros.</p>
   <hr class="my-4">
-  <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+  <p>Voce tem acesso aos formularios de cadastros logo abaixo! Desfrute.</p>
 </div>
   <ul class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Cor</a>
+    <a class="nav-link active" href="{{ route('listar_cor')}}">Cor</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Veiculo</a>
+    <a class="nav-link" href="{{ route('listar_veiculo')}}">Veiculo</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Marca</a>
+    <a class="nav-link" href="{{ route('listar_marca')}}">Marca</a>
 </ul>
 
     
